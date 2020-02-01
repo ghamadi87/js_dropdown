@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="dropdown.js"></script>
+    <link rel="stylesheet" href="dropdown.css" />
+    <title>DropDown Test Drive</title>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        width: 90vw;
+      }
+      #container {
+        width: 250px;
+        height: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script>
+      var arr = [], dropdown;
+  
+      for (let i = 0; i < 10; i++)
+        arr.push({ name: "Item Title" + i, subKey: "subtitle " + i });
+  
+      dropdown = new DropDown({
+        objectsList: arr,
+        optionTitleKey: "name",
+        optionSubKey: "subKey",
+        iconColor: "black",
+        underlinedOptions: false,
+        attributes: { namasdasde: "testName", disabled: "disabled" }
+      });
+
+      document.getElementById("container").appendChild(dropdown.render());
+
+    </script>
+  </body>
+</html>
